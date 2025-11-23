@@ -3,9 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>カイナテクノロジー株式会社</title>
+  <title>カイナテクノロジー株式会社 | Kaina Technology Co., Ltd.</title>
+  <meta name="description" content="カイナテクノロジー株式会社は、卸売・小売事業および電子商取引サイトの運営を中心に、多様な商品とサービスを国内外へ提供します。" />
+  <meta name="keywords" content="卸売, 小売, EC, 電子商取引, Kaina Technology, カイナテクノロジー" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Banner大图 */
+    .banner {
+      width: 100%;
+      height: 340px;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 60px;
+    }
+    .banner-text {
+      background: rgba(44,95,192,0.7);
+      color: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .banner-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .banner-text p {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+    .banner-text .badge {
+      display: inline-block;
+      margin-top: 0.6rem;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 0.35rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* 新闻区块 */
+    .news-list {
+      max-width: 700px;
+      margin: 2rem auto 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+    .news-list li {
+      background: #fff;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+    }
+    .news-date {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-right: 1.5rem;
+      min-width: 90px;
+    }
+
+    /* 服务图标 */
+    .service-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    /* 联系方式 */
+    .contact-info {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 6px;
+      max-width: 600px;
+      margin: 2rem auto 0 auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1.05rem;
+    }
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    /* 页脚社交链接 */
+    .footer-social {
+      margin-top: 1rem;
+    }
+    .footer-social a {
+      color: #fff;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover {
+      color: #3b82f6;
+    }
     :root {
       --bg-light: #f0f9ff;     /* 浅蓝背景 */
       --primary-color: #2c5fc0; /* 深蓝文字 */
@@ -201,7 +300,7 @@
 
 <nav>
   <div class="logo">
-    <img src="logo.svg" alt="カイナテクノロジー株式会社">
+    <img src="logo.svg" alt="カイナテクノロジー株式会社 Kaina Technology Co., Ltd.">
   </div>
   <ul>
     <li><a href="#about" class="active">会社概要</a></li>
@@ -210,51 +309,90 @@
   </ul>
 </nav>
 
+
+<div class="banner">
+  <div class="banner-text">
+    <h1>カイナテクノロジー株式会社<br><span style="font-size:1.1rem;font-weight:400;">Kaina Technology Co., Ltd.</span></h1>
+    <p>未来を創造し、価値を届けるITパートナー</p>
+  </div>
+</div>
+
 <header class="hero" id="home">
   <h1>ビジネスの未来を創造する</h1>
-  <p>私たちはお客様の目標達成を支援することに尽力しています。</p>
-  <a href="#services" class="btn-primary">詳しく見る</a>
+  <p>お客様の成長と成功を支援する、信頼のテクノロジー企業です。私たちはお客様の目標達成を支援することに尽力しています。</p>
+  <a href="#services" class="btn-primary">サービスを見る</a>
 </header>
 
 <section id="about">
   <h2>会社概要</h2>
-  <p>カイナテクノロジー株式会社は、革新的なITサービスと幅広い事業領域を通じて、お客様のビジネスをサポートしています。国内外での物品・デジタルコンテンツの取引から、最先端のITソリューションまで、一貫したサービスを提供しています。</p>
+  <p>カイナテクノロジー株式会社（Kaina Technology Co., Ltd.）は、革新的なITサービスと幅広い事業領域を通じて、お客様のビジネスをサポートしています。国内外での物品・デジタルコンテンツの取引から、最先端のITソリューションまで、一貫したサービスを提供しています。</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:2rem;">
+    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
+      <h3 style="color:var(--primary-color);margin-top:0;">会社名</h3>
+      <p>カイナテクノロジー株式会社<br>Kaina Technology Co., Ltd.<br>かいなてくのろじー かぶしきがいしゃ</p>
+    </div>
+    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
+      <h3 style="color:var(--primary-color);margin-top:0;">所在地</h3>
+      <p>〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F<br>160-0022 Tokyo, Shinjuku City, Shinjuku, 1-chōme−36-2 Shinjuku Dai 7 Hayama Bldg., 3F</p>
+    </div>
+    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
+      <h3 style="color:var(--primary-color);margin-top:0;">代表者</h3>
+      <p>代表取締役社長　侯 玉連</p>
+    </div>
+    <!-- メール情報（上部カード）は要望により非表示にしました -->
+  </div>
 </section>
 
 <section id="services">
   <h2>サービス内容</h2>
   <div class="services">
     <div class="service-card">
-      <h3>卸売業・小売業・輸入販売</h3>
-      <p>多様な商品を国内外から輸入・販売し、卸売および小売事業を展開しています。電子商取引サイトの運営も行い、幅広いニーズに応えます。</p>
+      <div class="icon">🛒</div>
+      <h3>卸売・小売・EC運営</h3>
+      <p>当社の中核事業です。国内外から厳選した商品の仕入れ、卸売・小売での流通、さらに自社およびパートナー向けの電子商取引サイトの企画・運営を行い、B2B/B2C双方のニーズに応えます。物流・在庫管理、決済、顧客対応までワンストップでサポートします。</p>
     </div>
     <div class="service-card">
+      <div class="icon">💻</div>
       <h3>ITコンサルティング・ソフトウェア開発</h3>
-      <p>最新の技術動向を踏まえたITコンサルティングと、ニーズに合わせたオーダーメイドのソフトウェア開発を提供します。</p>
+      <p>最新技術を活用したITコンサルティングと、オーダーメイドのソフトウェア開発を提供します。</p>
     </div>
     <div class="service-card">
+      <div class="icon">📦</div>
       <h3>通信販売事業</h3>
-      <p>インターネットを活用した通信販売事業を展開し、お客様に便利で迅速な購買体験を提供します。</p>
+      <p>インターネットを活用した通信販売事業で、便利で迅速な購買体験を提供します。</p>
     </div>
     <div class="service-card">
+      <div class="icon">🌏</div>
       <h3>物品・デジタルコンテンツの輸出入</h3>
-      <p>国内外における物品およびデジタルコンテンツの輸出入業務を行い、グローバルな取引をサポートします。</p>
+      <p>国内外における物品・デジタルコンテンツの輸出入業務でグローバルな取引をサポート。</p>
     </div>
     <div class="service-card">
+      <div class="icon">🛠️</div>
       <h3>情報処理システム設計・開発・保守</h3>
-      <p>情報処理システムの設計から開発、保守、コンサルティングまで、ワンストップで提供します。</p>
+      <p>情報処理システムの設計・開発・保守・コンサルティングまでワンストップで提供。</p>
     </div>
     <div class="service-card">
+      <div class="icon">🎨</div>
       <h3>ウェブデザイン・制作・保守</h3>
-      <p>企業やサービスのブランド価値を高めるウェブページのデザイン、制作、保守管理業務を行います。</p>
+      <p>ブランド価値を高めるウェブページのデザイン・制作・保守管理業務を行います。</p>
     </div>
   </div>
 </section>
 
+
+<section id="news">
+  <h2>ニュース / お知らせ</h2>
+  <ul class="news-list">
+    <li><span class="news-date">2025/10/01</span>会社設立のお知らせ — カイナテクノロジー株式会社を設立しました。</li>
+  </ul>
+</section>
+
 <section id="contact">
   <h2>お問い合わせ</h2>
-  <form class="contact-form" name="contact" method="POST" data-netlify="true">
+  <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/www.kainatech.com@gmail.com">
     <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="_subject" value="お問い合わせ - カイナテクノロジー" />
+    <input type="hidden" name="_captcha" value="false" />
     <label>お名前</label>
     <input type="text" name="name" required />
     <label>メールアドレス</label>
@@ -263,10 +401,24 @@
     <textarea name="message" rows="5" required></textarea>
     <button type="submit">送信</button>
   </form>
+  <div class="contact-info">
+    <p><strong>会社名：</strong> カイナテクノロジー株式会社（Kaina Technology Co., Ltd.）</p>
+    <p><strong>所在地：</strong> 〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F</p>
+    <p><strong>メール：</strong> www.kainatech.com@gmail.com</p>
+    <p><strong>代表者：</strong> 代表取締役社長　侯 玉連</p>
+    <p><strong>営業時間：</strong> 平日 9:00〜18:00</p>
+  </div>
 </section>
 
 <footer>
   <p>© 2025 カイナテクノロジー株式会社 — All Rights Reserved.</p>
+  <div class="footer-social">
+    <a href="https://twitter.com/" target="_blank" title="Twitter"><span aria-hidden="true">🐦</span></a>
+    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><span aria-hidden="true">📘</span></a>
+    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><span aria-hidden="true">💼</span></a>
+  </div>
+  <p style="margin-top:1rem;font-size:0.95rem;">〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F </p>
+  <p style="font-size:0.9rem;">代表取締役社長　侯 玉連 | kainatech.co.jp</p>
 </footer>
 
 </body>
