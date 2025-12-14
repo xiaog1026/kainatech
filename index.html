@@ -4,111 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>カイナテクノロジー株式会社 | Kaina Technology Co., Ltd.</title>
-  <meta name="description" content="カイナテクノロジー株式会社は、卸売・小売事業および電子商取引サイトの運営を中心に、多様な商品とサービスを国内外へ提供します。" />
-  <meta name="keywords" content="卸売, 小売, EC, 電子商取引, Kaina Technology, カイナテクノロジー" />
+
+  <meta name="description" content="カイナテクノロジー株式会社は、卸売・小売および電子商取引（EC）事業を中心に、日用品・ファッション雑貨などの企画・販売を行う法人企業です。" />
+  <meta name="keywords" content="卸売, 小売, EC, 電子商取引, ファッション雑貨, 日用品, カイナテクノロジー" />
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
-    /* Banner大图 */
-    .banner {
-      width: 100%;
-      height: 340px;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-top: 60px;
-    }
-    .banner-text {
-      background: rgba(44,95,192,0.7);
-      color: #fff;
-      padding: 2rem 3rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-    .banner-text h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .banner-text p {
-      font-size: 1.3rem;
-      margin-bottom: 0;
-    }
-    .banner-text .badge {
-      display: inline-block;
-      margin-top: 0.6rem;
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      padding: 0.35rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    /* 新闻区块 */
-    .news-list {
-      max-width: 700px;
-      margin: 2rem auto 0 auto;
-      padding: 0;
-      list-style: none;
-    }
-    .news-list li {
-      background: #fff;
-      margin-bottom: 1rem;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-      display: flex;
-      align-items: center;
-    }
-    .news-date {
-      color: var(--primary-color);
-      font-weight: 700;
-      margin-right: 1.5rem;
-      min-width: 90px;
-    }
-
-    /* 服务图标 */
-    .service-card .icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent-color);
-    }
-
-    /* 联系方式 */
-    .contact-info {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 6px;
-      max-width: 600px;
-      margin: 2rem auto 0 auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-size: 1.05rem;
-    }
-    .contact-info p {
-      margin: 0.5rem 0;
-    }
-
-    /* 页脚社交链接 */
-    .footer-social {
-      margin-top: 1rem;
-    }
-    .footer-social a {
-      color: #fff;
-      margin: 0 0.5rem;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-social a:hover {
-      color: #3b82f6;
-    }
     :root {
-      --bg-light: #f0f9ff;     /* 浅蓝背景 */
-      --primary-color: #2c5fc0; /* 深蓝文字 */
-      --accent-color: #3b82f6;  /* 亮蓝按钮 */
+      --bg-light: #f0f9ff;
+      --primary-color: #2c5fc0;
+      --accent-color: #3b82f6;
       --text-color: #333;
     }
 
@@ -116,103 +22,131 @@
       font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
       padding: 0;
-      color: var(--text-color);
       background: var(--bg-light);
+      color: var(--text-color);
       line-height: 1.6;
     }
 
-    /* 导航栏 */
+    /* ナビ */
     nav {
-      background: transparent;
       position: fixed;
-      width: 100%;
       top: 0;
-      left: 0;
-      z-index: 100;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 0.5rem 1rem;
-    }
-    .logo {
-      display: flex;
       align-items: center;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
     .logo img {
-      height: 50px;
+      height: 48px;
     }
     nav ul {
       list-style: none;
+      display: flex;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
     }
-    nav ul li {
+    nav li {
       margin-left: 1rem;
     }
-    nav ul li a {
-      color: var(--primary-color);
+    nav a {
       text-decoration: none;
       font-weight: 700;
-      padding: 0.5rem 1rem;
+      color: var(--primary-color);
+      padding: 0.4rem 0.8rem;
       border-radius: 4px;
     }
-    nav ul li a:hover,
-    nav ul li a.active {
+    nav a:hover,
+    nav a.active {
       background: var(--accent-color);
       color: #fff;
     }
 
-    /* 头部 Hero */
-    header.hero {
-      background: var(--bg-light);
-      color: var(--primary-color);
+    /* バナー */
+    .banner {
+      margin-top: 64px;
+      height: 320px;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    .banner-text {
+      background: rgba(44,95,192,0.75);
+      color: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
       text-align: center;
-      padding: 8rem 1rem 4rem 1rem;
     }
-    header.hero h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
+    .banner-text h1 {
+      margin: 0;
+      font-size: 2.6rem;
     }
-    header.hero p {
+    .banner-text p {
+      margin-top: 0.8rem;
       font-size: 1.2rem;
-      margin: 0.5rem 0 2rem 0;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.15);
+      font-size: 0.9rem;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 1rem auto 2rem auto;
       color: var(--primary-color);
     }
     .btn-primary {
       background: var(--accent-color);
       color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
+      padding: 0.7rem 1.6rem;
       border-radius: 4px;
-      font-size: 1rem;
       text-decoration: none;
-      display: inline-block;
-    }
-    .btn-primary:hover {
-      background: #2563eb;
+      font-weight: 700;
     }
 
-    /* 区块通用 */
-    section {
-      padding: 4rem 1rem;
-      max-width: 1100px;
-      margin: auto;
+    /* 会社概要 */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    section h2 {
-      text-align: center;
-      color: var(--primary-color);
-      margin-top: 0;
-      margin-bottom: 2rem;
+    .info-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
     }
 
-    /* 服务卡片 */
+    /* サービス */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -225,77 +159,72 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .service-card h3 {
-      margin-top: 0;
+    .service-card .icon {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    /* ニュース */
+    .news-list {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+    .news-list li {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      display: flex;
+    }
+    .news-date {
+      min-width: 90px;
+      font-weight: 700;
       color: var(--primary-color);
     }
 
-    /* 联系表单 */
-    .contact-form {
+    /* お問い合わせ */
+    .contact-form,
+    .contact-info {
       background: #fff;
       padding: 2rem;
       border-radius: 6px;
-      max-width: 600px;
-      margin: auto;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 1.5rem auto;
     }
     input, textarea {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.7rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-    input:focus, textarea:focus {
-      border-color: var(--accent-color);
-      outline: none;
+      border: 1px solid #ccc;
     }
     button {
       background: var(--accent-color);
       color: #fff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 1rem;
-    }
-    button:hover {
-      background: #2563eb;
     }
 
-    /* 页脚 */
     footer {
-      text-align: center;
-      padding: 2rem 1rem;
       background: var(--primary-color);
       color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
 
-    /* 响应式 */
     @media (max-width: 768px) {
-      header.hero h1 {
-        font-size: 2rem;
-      }
-      header.hero p {
-        font-size: 1rem;
-      }
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav ul {
-        justify-content: center;
-        width: 100%;
-        margin-top: 0.5rem;
-      }
-      section {
-        padding: 2rem 1rem;
-      }
+      .banner-text h1 { font-size: 2rem; }
     }
   </style>
 </head>
+
 <body>
 
 <nav>
@@ -304,121 +233,106 @@
   </div>
   <ul>
     <li><a href="#about" class="active">会社概要</a></li>
-    <li><a href="#services">サービス</a></li>
+    <li><a href="#services">事業内容</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
   </ul>
 </nav>
 
-
 <div class="banner">
   <div class="banner-text">
-    <h1>カイナテクノロジー株式会社<br><span style="font-size:1.1rem;font-weight:400;">Kaina Technology Co., Ltd.</span></h1>
-    <p>未来を創造し、価値を届けるITパートナー</p>
+    <h1>カイナテクノロジー株式会社</h1>
+    <p>卸売・小売・EC事業を通じて、安心できる商品をお届けします</p>
+    <span class="badge">Wholesale / Retail / E-Commerce</span>
   </div>
 </div>
 
-<header class="hero" id="home">
-  <h1>ビジネスの未来を創造する</h1>
-  <p>お客様の成長と成功を支援する、信頼のテクノロジー企業です。私たちはお客様の目標達成を支援することに尽力しています。</p>
-  <a href="#services" class="btn-primary">サービスを見る</a>
-</header>
+<section class="hero">
+  <h1>法人として、責任あるEC運営を</h1>
+  <p>
+    カイナテクノロジー株式会社は、ファッション雑貨・生活関連商品を中心に、
+    法人としての責任ある管理体制のもと、卸売・小売およびECサイト運営を行っています。
+  </p>
+  <a href="#services" class="btn-primary">事業内容を見る</a>
+</section>
 
 <section id="about">
   <h2>会社概要</h2>
-  <p>カイナテクノロジー株式会社（Kaina Technology Co., Ltd.）は、革新的なITサービスと幅広い事業領域を通じて、お客様のビジネスをサポートしています。国内外での物品・デジタルコンテンツの取引から、最先端のITソリューションまで、一貫したサービスを提供しています。</p>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:2rem;">
-    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
-      <h3 style="color:var(--primary-color);margin-top:0;">会社名</h3>
-      <p>カイナテクノロジー株式会社<br>Kaina Technology Co., Ltd.<br>かいなてくのろじー かぶしきがいしゃ</p>
+  <p>
+    国内外のパートナー企業と連携し、商品の企画・仕入・検品・梱包・発送まで
+    一貫した販売体制を構築しています。
+  </p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>会社名</h3>
+      <p>カイナテクノロジー株式会社<br>Kaina Technology Co., Ltd.</p>
     </div>
-    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
-      <h3 style="color:var(--primary-color);margin-top:0;">所在地</h3>
-      <p>〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F<br>160-0022 Tokyo, Shinjuku City, Shinjuku, 1-chōme−36-2 Shinjuku Dai 7 Hayama Bldg., 3F</p>
+    <div class="info-card">
+      <h3>所在地</h3>
+      <p>〒160-0022<br>東京都新宿区新宿1丁目36-2<br>新宿第七葉山ビル3F</p>
     </div>
-    <div style="flex:1;min-width:220px;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.07);">
-      <h3 style="color:var(--primary-color);margin-top:0;">代表者</h3>
+    <div class="info-card">
+      <h3>代表者</h3>
       <p>代表取締役社長　侯 玉連</p>
     </div>
-    <!-- メール情報（上部カード）は要望により非表示にしました -->
   </div>
 </section>
 
 <section id="services">
-  <h2>サービス内容</h2>
+  <h2>事業内容</h2>
   <div class="services">
     <div class="service-card">
       <div class="icon">🛒</div>
       <h3>卸売・小売・EC運営</h3>
-      <p>当社の中核事業です。国内外から厳選した商品の仕入れ、卸売・小売での流通、さらに自社およびパートナー向けの電子商取引サイトの企画・運営を行い、B2B/B2C双方のニーズに応えます。物流・在庫管理、決済、顧客対応までワンストップでサポートします。</p>
+      <p>
+        当社の中核事業です。商品の仕入から在庫管理、オンライン販売、
+        国内外向けの通信販売・取引まで一貫して対応しています。
+      </p>
     </div>
     <div class="service-card">
       <div class="icon">💻</div>
-      <h3>ITコンサルティング・ソフトウェア開発</h3>
-      <p>最新技術を活用したITコンサルティングと、オーダーメイドのソフトウェア開発を提供します。</p>
-    </div>
-    <div class="service-card">
-      <div class="icon">📦</div>
-      <h3>通信販売事業</h3>
-      <p>インターネットを活用した通信販売事業で、便利で迅速な購買体験を提供します。</p>
-    </div>
-    <div class="service-card">
-      <div class="icon">🌏</div>
-      <h3>物品・デジタルコンテンツの輸出入</h3>
-      <p>国内外における物品・デジタルコンテンツの輸出入業務でグローバルな取引をサポート。</p>
-    </div>
-    <div class="service-card">
-      <div class="icon">🛠️</div>
-      <h3>情報処理システム設計・開発・保守</h3>
-      <p>情報処理システムの設計・開発・保守・コンサルティングまでワンストップで提供。</p>
-    </div>
-    <div class="service-card">
-      <div class="icon">🎨</div>
-      <h3>ウェブデザイン・制作・保守</h3>
-      <p>ブランド価値を高めるウェブページのデザイン・制作・保守管理業務を行います。</p>
+      <h3>IT・Web関連業務（付随事業）</h3>
+      <p>
+        EC運営に付随するWeb制作、システム開発、運用サポート業務を行っています。
+      </p>
     </div>
   </div>
 </section>
 
-
 <section id="news">
-  <h2>ニュース / お知らせ</h2>
+  <h2>お知らせ</h2>
   <ul class="news-list">
-    <li><span class="news-date">2025/10/01</span>会社設立のお知らせ — カイナテクノロジー株式会社を設立しました。</li>
+    <li>
+      <span class="news-date">2025年</span>
+      カイナテクノロジー株式会社 設立
+    </li>
   </ul>
 </section>
 
 <section id="contact">
   <h2>お問い合わせ</h2>
-  <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/www.kainatech.com@gmail.com">
-    <input type="hidden" name="form-name" value="contact" />
-    <input type="hidden" name="_subject" value="お問い合わせ - カイナテクノロジー" />
-    <input type="hidden" name="_captcha" value="false" />
+  <form class="contact-form" method="POST" action="https://formsubmit.co/info.kainatech@gmail.com">
+    <input type="hidden" name="_captcha" value="false">
     <label>お名前</label>
-    <input type="text" name="name" required />
+    <input type="text" name="name" required>
     <label>メールアドレス</label>
-    <input type="email" name="email" required />
+    <input type="email" name="email" required>
     <label>メッセージ</label>
     <textarea name="message" rows="5" required></textarea>
     <button type="submit">送信</button>
   </form>
+
   <div class="contact-info">
-    <p><strong>会社名：</strong> カイナテクノロジー株式会社（Kaina Technology Co., Ltd.）</p>
-    <p><strong>所在地：</strong> 〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F</p>
-    <p><strong>メール：</strong> www.kainatech.com@gmail.com</p>
-    <p><strong>代表者：</strong> 代表取締役社長　侯 玉連</p>
-    <p><strong>営業時間：</strong> 平日 9:00〜18:00</p>
+    <p><strong>会社名：</strong>カイナテクノロジー株式会社</p>
+    <p><strong>メール：</strong>info.kainatech@gmail.com</p>
+    <p><strong>営業時間：</strong>平日 9:00〜18:00</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 カイナテクノロジー株式会社 — All Rights Reserved.</p>
-  <div class="footer-social">
-    <a href="https://twitter.com/" target="_blank" title="Twitter"><span aria-hidden="true">🐦</span></a>
-    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><span aria-hidden="true">📘</span></a>
-    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><span aria-hidden="true">💼</span></a>
-  </div>
-  <p style="margin-top:1rem;font-size:0.95rem;">〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F </p>
-  <p style="font-size:0.9rem;">代表取締役社長　侯 玉連 | kainatech.co.jp</p>
+  <p>© 2025 カイナテクノロジー株式会社</p>
+  <p>〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F</p>
+  <p>代表取締役社長　侯 玉連 | kainatech.co.jp</p>
 </footer>
 
 </body>
