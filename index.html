@@ -3,336 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>カイナテクノロジー株式会社 | Kaina Technology Co., Ltd.</title>
+  <title>カイナテクノロジー株式会社 | EC・卸売・小売事業</title>
 
-  <meta name="description" content="カイナテクノロジー株式会社は、卸売・小売および電子商取引（EC）事業を中心に、日用品・ファッション雑貨などの企画・販売を行う法人企業です。" />
-  <meta name="keywords" content="卸売, 小売, EC, 電子商取引, ファッション雑貨, 日用品, カイナテクノロジー" />
+  <meta name="description" content="カイナテクノロジー株式会社は、EC運営・卸売・小売を中心に、ファッション雑貨・生活用品の企画販売を行う法人企業です。" />
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-light: #f0f9ff;
-      --primary-color: #2c5fc0;
-      --accent-color: #3b82f6;
-      --text-color: #333;
+      --primary:#1e3a8a;
+      --accent:#2563eb;
+      --bg:#f8fafc;
+      --text:#1f2937;
     }
-
     body {
-      font-family: 'Noto Sans JP', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-light);
-      color: var(--text-color);
-      line-height: 1.6;
+      font-family:'Noto Sans JP',sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
     }
-
-    /* ナビ */
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      z-index: 100;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      position:fixed;top:0;width:100%;
+      background:#fff;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:0.6rem 1.2rem;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+      z-index:100;
     }
-    .logo img {
-      height: 48px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin-left: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      font-weight: 700;
-      color: var(--primary-color);
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-    }
-    nav a:hover,
-    nav a.active {
-      background: var(--accent-color);
-      color: #fff;
-    }
+    nav img {height:44px;}
+    nav ul {list-style:none;display:flex;margin:0;padding:0;}
+    nav li {margin-left:1rem;}
+    nav a {text-decoration:none;color:var(--primary);font-weight:700;}
 
-    /* バナー */
-    .banner {
-      margin-top: 64px;
-      height: 320px;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    header {
+      margin-top:70px;
+      background:linear-gradient(120deg,#1e40af,#2563eb);
+      color:#fff;
+      padding:4rem 1rem;
+      text-align:center;
     }
-    .banner-text {
-      background: rgba(44,95,192,0.75);
-      color: #fff;
-      padding: 2rem 3rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .banner-text h1 {
-      margin: 0;
-      font-size: 2.6rem;
-    }
-    .banner-text p {
-      margin-top: 0.8rem;
-      font-size: 1.2rem;
-    }
-    .badge {
-      display: inline-block;
-      margin-top: 0.6rem;
-      padding: 0.3rem 0.9rem;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.15);
-      font-size: 0.9rem;
-    }
+    header h1 {font-size:2.6rem;margin-bottom:1rem;}
 
     section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 4rem 1rem;
+      max-width:1100px;
+      margin:auto;
+      padding:4rem 1rem;
     }
-    h2 {
-      text-align: center;
-      color: var(--primary-color);
-      margin-bottom: 2rem;
+    h2 {text-align:center;color:var(--primary);margin-bottom:2rem;}
+
+    .card {
+      background:#fff;
+      padding:2rem;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.06);
+      margin-bottom:2rem;
     }
 
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding-top: 2rem;
-    }
-    .hero h1 {
-      font-size: 2.2rem;
-      color: var(--primary-color);
-    }
-    .hero p {
-      max-width: 760px;
-      margin: 1rem auto 2rem auto;
-      color: var(--primary-color);
-    }
-    .btn-primary {
-      background: var(--accent-color);
-      color: #fff;
-      padding: 0.7rem 1.6rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:2rem;
     }
 
-    /* 会社概要 */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .info-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    }
+    table {width:100%;border-collapse:collapse;}
+    td {padding:0.6rem;border-bottom:1px solid #e5e7eb;vertical-align:top;}
+    td:first-child {font-weight:700;width:160px;}
 
-    /* サービス */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .service-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .service-card .icon {
-      font-size: 2.4rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent-color);
-    }
-
-    /* ニュース */
-    .news-list {
-      list-style: none;
-      padding: 0;
-      max-width: 700px;
-      margin: auto;
-    }
-    .news-list li {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-      display: flex;
-    }
-    .news-date {
-      min-width: 90px;
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-
-    /* お問い合わせ */
-    .contact-form,
-    .contact-info {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 1.5rem auto;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.7rem;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: var(--accent-color);
-      color: #fff;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+    .service-icon {font-size:2.2rem;margin-bottom:0.5rem;}
 
     footer {
-      background: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
+      background:#1e3a8a;color:#fff;text-align:center;
+      padding:2.5rem 1rem;font-size:0.9rem;
     }
+    footer a {color:#bfdbfe;text-decoration:none;}
 
-    @media (max-width: 768px) {
-      .banner-text h1 { font-size: 2rem; }
-    }
+    @media(max-width:768px){header h1{font-size:2rem;}}
   </style>
 </head>
-
 <body>
 
 <nav>
-  <div class="logo">
-    <img src="logo.svg" alt="カイナテクノロジー株式会社 Kaina Technology Co., Ltd.">
-  </div>
+  <img src="logo.svg" alt="カイナテクノロジー株式会社">
   <ul>
-    <li><a href="#about" class="active">会社概要</a></li>
+    <li><a href="#about">会社概要</a></li>
     <li><a href="#services">事業内容</a></li>
+    <li><a href="#law">特定商取引法</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
   </ul>
 </nav>
 
-<div class="banner">
-  <div class="banner-text">
-    <h1>カイナテクノロジー株式会社</h1>
-    <p>卸売・小売・EC事業を通じて、安心できる商品をお届けします</p>
-    <span class="badge">Wholesale / Retail / E-Commerce</span>
-  </div>
-</div>
+<header>
+  <h1>カイナテクノロジー株式会社</h1>
+  <p>EC・卸売・小売を通じて、信頼される商品を安定的に提供します</p>
+</header>
 
-<section class="hero">
-  <h1>法人として、責任あるEC運営を</h1>
-  <p>
-    カイナテクノロジー株式会社は、ファッション雑貨・生活関連商品を中心に、
-    法人としての責任ある管理体制のもと、卸売・小売およびECサイト運営を行っています。
-  </p>
-  <a href="#services" class="btn-primary">事業内容を見る</a>
+<section id="philosophy">
+  <h2>企業理念・経営方針</h2>
+  <div class="card">
+    <p>
+      カイナテクノロジー株式会社は、<strong>「安心・信頼・継続」</strong>を軸に、
+      EC・卸売・小売事業を通じて、生活に身近で価値ある商品を提供します。
+    </p>
+    <p>
+      法令遵守と誠実な取引を最優先とし、
+      長期的な視点でお客様・取引先・社会と信頼関係を築くことを経営方針としています。
+    </p>
+  </div>
+</section>
+
+<section id="strength">
+  <h2>当社の強み</h2>
+  <div class="grid">
+    <div class="card"><h3>一貫したEC運営体制</h3><p>仕入・検品・在庫管理・発送までを自社で管理し、安定した品質を維持しています。</p></div>
+    <div class="card"><h3>法人取引対応</h3><p>B2B取引・請求書対応など、法人向けの取引体制を整えています。</p></div>
+    <div class="card"><h3>IT活用による効率化</h3><p>ECシステムと業務効率化を組み合わせ、スピーディーな運営を実現しています。</p></div>
+  </div>
+</section>
+
+
+
+<section id="services">
+  <h2>事業内容</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="service-icon">📦</div>
+      <h3>EC・通信販売事業</h3>
+      <p>ファッション雑貨・生活用品を中心に、国内ECモールおよび自社ECサイトを通じて販売を行っています。</p>
+    </div>
+    <div class="card">
+      <div class="service-icon">🏬</div>
+      <h3>卸売・小売事業</h3>
+      <p>法人・個人事業主向けの卸売取引に対応し、安定した供給体制を構築しています。</p>
+    </div>
+    <div class="card">
+      <div class="service-icon">💻</div>
+      <h3>IT・Web関連業務</h3>
+      <p>EC運営に付随するWeb制作、システム運用、業務効率化支援を行っています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <h2>事業の流れ</h2>
+  <div class="grid">
+    <div class="card"><h3>① 商品企画・仕入</h3><p>市場調査を行い、国内外のパートナーから商品を選定・仕入します。</p></div>
+    <div class="card"><h3>② 検品・在庫管理</h3><p>品質確認を行い、適切な在庫管理体制のもとで保管します。</p></div>
+    <div class="card"><h3>③ 販売・出荷</h3><p>ECモール・自社サイトを通じて販売し、迅速な出荷を行います。</p></div>
+    <div class="card"><h3>④ アフターサポート</h3><p>法人として責任あるカスタマーサポート・返品対応を行います。</p></div>
+  </div>
+</section>
+
+<section id="ec">
+  <h2>EC事業について</h2>
+  <div class="card">
+    <p>
+      当社は複数の国内ECプラットフォームおよび自社ECサイトを活用し、
+      法令遵守と顧客満足を重視した運営を行っています。
+    </p>
+    <ul>
+      <li>国内主要ECモールでの販売</li>
+      <li>自社ECサイトの運営</li>
+      <li>法人・業者向け卸売対応</li>
+    </ul>
+  </div>
+</section>
+
+<section id="achievement">
+  <h2>実績・取り組み</h2>
+  <div class="card">
+    <ul>
+      <li>2025年　カイナテクノロジー株式会社 設立</li>
+      <li>EC事業・卸売事業 開始</li>
+      <li>販売体制・業務フロー整備</li>
+    </ul>
+  </div>
 </section>
 
 <section id="about">
   <h2>会社概要</h2>
-  <p>
-    国内外のパートナー企業と連携し、商品の企画・仕入・検品・梱包・発送まで
-    一貫した販売体制を構築しています。
-  </p>
-
-  <div class="info-grid">
-    <div class="info-card">
-      <h3>会社名</h3>
-      <p>カイナテクノロジー株式会社<br>Kaina Technology Co., Ltd.</p>
-    </div>
-    <div class="info-card">
-      <h3>所在地</h3>
-      <p>〒160-0022<br>東京都新宿区新宿1丁目36-2<br>新宿第七葉山ビル3F</p>
-    </div>
-    <div class="info-card">
-      <h3>代表者</h3>
-      <p>代表取締役社長　侯 玉連</p>
-    </div>
+  <div class="card">
+    <table>
+      <tr><td>会社名</td><td>カイナテクノロジー株式会社</td></tr>
+      <tr><td>英文社名</td><td>Kaina Technology Co., Ltd.</td></tr>
+      <tr><td>設立</td><td>2025年</td></tr>
+      <tr><td>代表者</td><td>代表取締役社長　侯 玉連</td></tr>
+      <tr><td>所在地</td><td>〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F</td></tr>
+      <tr><td>事業内容</td><td>ECサイト運営／卸売・小売業／商品企画・販売</td></tr>
+      <tr><td>事業形態</td><td>B2C・B2B</td></tr>
+    </table>
   </div>
 </section>
 
-<section id="services">
-  <h2>事業内容</h2>
-  <div class="services">
-    <div class="service-card">
-      <div class="icon">🛒</div>
-      <h3>卸売・小売・EC運営</h3>
-      <p>
-        当社の中核事業です。商品の仕入から在庫管理、オンライン販売、
-        国内外向けの通信販売・取引まで一貫して対応しています。
-      </p>
-    </div>
-    <div class="service-card">
-      <div class="icon">💻</div>
-      <h3>IT・Web関連業務（付随事業）</h3>
-      <p>
-        EC運営に付随するWeb制作、システム開発、運用サポート業務を行っています。
-      </p>
-    </div>
+<section id="law">
+  <h2>特定商取引法に基づく表記</h2>
+  <div class="card">
+    <table>
+      <tr><td>販売事業者</td><td>カイナテクノロジー株式会社</td></tr>
+      <tr><td>運営責任者</td><td>侯 玉連</td></tr>
+      <tr><td>所在地</td><td>東京都新宿区新宿1丁目36-2</td></tr>
+      <tr><td>連絡先</td><td>info.kainatech@gmail.com</td></tr>
+      <tr><td>販売価格</td><td>各商品ページに記載</td></tr>
+      <tr><td>支払方法</td><td>クレジットカード、その他各種決済</td></tr>
+      <tr><td>返品・交換</td><td>商品到着後7日以内、初期不良のみ対応</td></tr>
+    </table>
   </div>
-</section>
-
-<section id="news">
-  <h2>お知らせ</h2>
-  <ul class="news-list">
-    <li>
-      <span class="news-date">2025年</span>
-      カイナテクノロジー株式会社 設立
-    </li>
-  </ul>
 </section>
 
 <section id="contact">
   <h2>お問い合わせ</h2>
-  <form class="contact-form" method="POST" action="https://formsubmit.co/info.kainatech@gmail.com">
-    <input type="hidden" name="_captcha" value="false">
-    <label>お名前</label>
-    <input type="text" name="name" required>
-    <label>メールアドレス</label>
-    <input type="email" name="email" required>
-    <label>メッセージ</label>
-    <textarea name="message" rows="5" required></textarea>
-    <button type="submit">送信</button>
-  </form>
-
-  <div class="contact-info">
-    <p><strong>会社名：</strong>カイナテクノロジー株式会社</p>
-    <p><strong>メール：</strong>info.kainatech@gmail.com</p>
-    <p><strong>営業時間：</strong>平日 9:00〜18:00</p>
+  <div class="card">
+    <p>
+      メール：info.kainatech@gmail.com<br>
+      営業時間：平日 9:00〜18:00
+    </p>
   </div>
 </section>
 
 <footer>
   <p>© 2025 カイナテクノロジー株式会社</p>
   <p>〒160-0022 東京都新宿区新宿1丁目36-2 新宿第七葉山ビル3F</p>
-  <p>代表取締役社長　侯 玉連 | kainatech.co.jp</p>
+  <p><a href="https://kainatech.co.jp">kainatech.co.jp</a></p>
 </footer>
 
 </body>
